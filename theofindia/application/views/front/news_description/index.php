@@ -98,13 +98,18 @@
                                                     if (file_exists('uploads/news_image/' . $row['thumb'])) {
                                                         ?>
                                                         <span onClick="image_modal('<?php echo base_url(); ?>uploads/news_image/<?php echo $row['img']; ?>');">
-                                                            <div class="item-image cursorPointer image_delay" data-src="<?php echo base_url(); ?>uploads/news_image/<?php echo $row['img']; ?>"  style="background-image:url('<?php echo img_loading(); ?>')"></div>
+                                                           <!--  <div class="item-image cursorPointer image_delay" data-src="<?php echo base_url(); ?>uploads/news_image/<?php echo $row['img']; ?>"  style="background-image:url('<?php echo img_loading(); ?>')"></div> -->
+
+
+                                                           <div class="item-image cursorPointer image_delay1" style="background-image:url(<?php echo base_url(); ?>uploads/news_image/<?php echo $row['img']; ?>)"></div>
                                                         </span>
                                                         <?php
                                                     } else {
                                                         ?>
                                                         <span onClick="image_modal('<?php echo base_url(); ?>uploads/news_image/default.jpg');">
-                                                            <div class="item-image cursorPointer image_delay" data-src="<?php echo base_url(); ?>uploads/news_image/default.jpg"  style="background-image:url('<?php echo img_loading(); ?>')"></div>
+                                                            <!-- <div class="item-image cursorPointer image_delay" data-src="<?php echo base_url(); ?>uploads/news_image/default.jpg"  style="background-image:url('<?php echo img_loading(); ?>')"></div> -->
+
+                                                            <div class="item-image cursorPointer image_delay1"  style="background-image:url(<?php echo base_url(); ?>uploads/news_image/default.jpg)"></div>
                                                         </span>
                                                         <?php
                                                     }
@@ -118,7 +123,9 @@
                                 } else {
                                         ?>
                                         <span onClick="image_modal('<?php echo base_url(); ?>uploads/news_image/<?php echo $img[0]['img']; ?>');">
-                                            <img class="img-thumbnail img-responsive cursorPointer image_delay" src="<?php echo img_loading(); ?>" data-src="<?php echo base_url(); ?>uploads/news_image/<?php echo $img[0]['img']; ?>"  />
+                                           <!--  <img class="img-thumbnail img-responsive cursorPointer image_delay" src="<?php echo img_loading(); ?>" data-src="<?php echo base_url(); ?>uploads/news_image/<?php echo $img[0]['img']; ?>"  /> -->
+
+                                           <img class="img-thumbnail img-responsive cursorPointer image_delay1" src="<?php echo base_url(); ?>uploads/news_image/<?php echo $img[0]['img']; ?>"  />
                                         </span>
                                         <?php
                                 }
