@@ -12,7 +12,7 @@
 
         <!-- PRELOADER -->
 
-        <?php include 'preloader.php' ;?>
+        <?php //include 'preloader.php' ;?>
 
         <!-- /PRELOADER -->
 
