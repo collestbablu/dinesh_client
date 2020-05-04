@@ -63,6 +63,9 @@
                         </li>
                     <?php else: ?>
                         <?php if ($this->general_settings->registration_system == 1): ?>
+                            <li>
+                             <a href="#" data-toggle="modal" data-target="#modal-login" class="btn_open_login_modal"><?php echo trans("add_post"); ?></a>
+                        </li>
                             <li class="top-li-auth">
                                 <a href="#" data-toggle="modal" data-target="#modal-login" class="btn_open_login_modal"><?php echo trans("login"); ?></a>
                                 <span>/</span>

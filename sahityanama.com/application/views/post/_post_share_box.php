@@ -42,7 +42,11 @@
         </a>
     </li>
     <li class="li-whatsapp">
-        <a href="https://api.whatsapp.com/send?text=<?php echo html_escape($post->title); ?> - <?php echo generate_post_url($post); ?>"
+      <?php
+       $actual_link = "https://$_SERVER[HTTP_HOST]".'/'.urldecode($this->uri->segment(1));
+      ?>
+      
+        <a href="https://api.whatsapp.com/send?text=<?php echo html_escape($post->title); ?> - <?php echo $actual_link; ?>"
            class="social-btn-sm whatsapp"
            target="_blank">
             <i class="icon-whatsapp"></i>

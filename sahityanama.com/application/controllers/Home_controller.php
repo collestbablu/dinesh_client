@@ -50,6 +50,7 @@ class Home_controller extends Home_Core_Controller
      */
     public function posts()
     {
+
         get_method();
         $data['title'] = trans("posts");
         $data['description'] = trans("posts") . " - " . $this->settings->site_title;
@@ -217,6 +218,7 @@ class Home_controller extends Home_Core_Controller
      */
     private function post($post)
     {
+        
         if (empty($post)) {
             redirect(lang_base_url());
         }
