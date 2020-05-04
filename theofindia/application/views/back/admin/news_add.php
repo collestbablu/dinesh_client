@@ -2,7 +2,7 @@
 
     <div class="col-md-12">
 
-        <?php
+        <?php 
 
         echo form_open(base_url() . 'admin/news/do_add/', array(
 
@@ -37,7 +37,9 @@
                 </div>
 
             </div>
-
+            <?php 
+                if($this->session->userdata('role')=='1'){
+             ?>
             <div class="form-group btm_border">
 
                 <label class="col-sm-2 control-label">
@@ -48,12 +50,12 @@
 
                 <div class="col-sm-10">
 
-                    <textarea class="form-control required" rows="10" cols="135" name="summary" ></textarea>
+                    <textarea class="form-control" rows="10" cols="135" name="summary" ></textarea>
 
                 </div>
 
             </div>
-
+        <?php }?>
             <div class="form-group btm_border">
 
                 <label class="col-sm-2 control-label">
@@ -211,12 +213,14 @@ $dateTime = new DateTime('now', new DateTimeZone('Asia/Kolkata'));
 
                     <input type="text" name="tag" id="tag"  data-role="tagsinput"
 
-                           placeholder="<?php echo translate('tags'); ?>" class="form-control required"  >
+                           placeholder="<?php echo translate('tags'); ?>" class="form-control"  >
 
                 </div>
 
             </div>
-
+             <?php 
+                if($this->session->userdata('role')=='1'){
+             ?>
             <div class="form-group btm_border">
 
                 <label class="col-sm-2 control-label">
@@ -229,13 +233,14 @@ $dateTime = new DateTime('now', new DateTimeZone('Asia/Kolkata'));
 
                     <?php
 
-                    echo $this->Crud_model->select_html('news_speciality', 'news_speciality', 'name', 'add', 'demo-chosen-select required', '');
+                    echo $this->Crud_model->select_html('news_speciality', 'news_speciality', 'name', 'add', 'demo-chosen-select ', '');
 
                     ?>
 
                 </div>
 
             </div>
+       
 
             <div class="form-group btm_border">
 
@@ -258,6 +263,7 @@ $dateTime = new DateTime('now', new DateTimeZone('Asia/Kolkata'));
                 </div>
 
             </div>
+             <?php }?>
 				<?php 
 				if($this->session->userdata('role')=='1'){?>
             <div class="form-group btm_border">

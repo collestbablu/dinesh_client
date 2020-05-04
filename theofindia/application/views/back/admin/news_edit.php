@@ -43,23 +43,25 @@ foreach ($news_data as $row) {
                     </div>
 
                 </div>
-
+             <?php 
+                if($this->session->userdata('role')=='1'){
+             ?>
                 <div class="form-group btm_border">
 
                     <label class="col-sm-2 control-label">
 
-                        <?php echo translate('summary'); ?>
+                         <?php echo translate('summary'); ?>
 
                     </label>
 
                     <div class="col-sm-10">
 
-                        <textarea rows="10" cols="135" class="form-control required" name="summary" ><?php echo $row['summary']; ?></textarea>
+                        <textarea rows="10" cols="135" class="form-control " name="summary" ><?php echo $row['summary']; ?></textarea>
 
                     </div>
 
                 </div>
-
+            <?php }?>
                 <div class="form-group btm_border">
 
                     <label class="col-sm-2 control-label">
@@ -306,14 +308,16 @@ foreach ($news_data as $row) {
 
                     <div class="col-sm-10">
 
-                        <input type="text" name="tag" data-role="tagsinput" class="form-control required"
+                        <input type="text" name="tag" data-role="tagsinput" class="form-control "
 
                                placeholder="<?php echo translate('tags'); ?>" value="<?php echo $row['tag']; ?>">
 
                     </div>
 
                 </div>
-
+                 <?php 
+                if($this->session->userdata('role')=='1'){
+                ?>
                 <div class="form-group btm_border">
 
                     <label class="col-sm-2 control-label">
@@ -326,7 +330,7 @@ foreach ($news_data as $row) {
 
                         <?php
 
-                        echo $this->Crud_model->select_html('news_speciality', 'news_speciality', 'name', 'edit', 'demo-chosen-select required', $row['news_speciality_id']);
+                        echo $this->Crud_model->select_html('news_speciality', 'news_speciality', 'name', 'edit', 'demo-chosen-select ', $row['news_speciality_id']);
 
                         ?>
 
@@ -353,6 +357,10 @@ foreach ($news_data as $row) {
                     </div>
 
                 </div>
+                 <?php 
+                    }
+                
+                ?>
 				<?php 
 				if($this->session->userdata('role')=='1'){?>
                 <div class="form-group btm_border">
