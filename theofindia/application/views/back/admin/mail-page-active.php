@@ -13,7 +13,7 @@ Face Of India
 <td>&nbsp;</td>
 </tr>
 <?php
-$userQuery=$this->db->query("select *from news_reporter where news_reporter_id='$getnews->news_reporter_id'");
+$userQuery=$this->db->query("select *from admin where admin_id='$getnews->news_uploader_id'");
 $getUser=$userQuery->row();
 ?>
 <tr>
@@ -43,6 +43,14 @@ $getCity=$QueryCity->row();
 <td>city</td>
 <td><?=$getCity->name?>
 </td>
+</tr>
+<tr>
+
+<td>Published Date</td>
+
+<td><?php echo date("F j, Y", $getnews->publish_timestamp);?>
+</td>
+
 </tr>
 <tr>
 <td>View News</td>

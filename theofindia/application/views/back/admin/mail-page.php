@@ -20,7 +20,7 @@
 
 <?php
 
-$userQuery=$this->db->query("select *from news_reporter where news_reporter_id='$news_reporter_id'");
+$userQuery=$this->db->query("select *from admin where admin_id='$news_uploader_id'");
 
 $getUser=$userQuery->row();
 
@@ -78,6 +78,15 @@ $getCity=$QueryCity->row();
 
 <td><?=$getCity->name?>
 
+</td>
+
+</tr>
+
+<tr>
+
+<td>Date</td>
+
+<td><?php echo date("F j, Y", $date);?>
 </td>
 
 </tr>
