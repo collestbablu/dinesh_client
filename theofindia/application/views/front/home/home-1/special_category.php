@@ -1,5 +1,7 @@
 <?php
-$this->db->limit($special_category_data['count']);
+$this->db->limit($jyotish['count']);
+
+$this->db->order_by('serial_6','desc');
 
 $this->db->order_by('news_id','desc');
 
@@ -10,7 +12,7 @@ $this->db->where('status','published');
 $jyotish	= $this->db->get('news')->result_array();
 
 
-$this->db->limit($special_category_data['count']);
+$this->db->limit($sports['count']);
 
 $this->db->order_by('news_id','desc');
 
@@ -20,7 +22,7 @@ $this->db->where('status','published');
 
 $sports	= $this->db->get('news')->result_array();
 
-$this->db->limit($special_category_data['count']);
+$this->db->limit($Health['count']);
 
 $this->db->order_by('news_id','desc');
 
@@ -46,8 +48,8 @@ $Health = $this->db->get('news')->result_array();
 </div>
 <div class="col-md-12 mar-t-5">
 <?php
-    if(isset($jyotish[3])){
-        echo $this->Html_model->news_box('rect_sm','1',$jyotish[3]);
+    if(isset($jyotish[1])){
+        echo $this->Html_model->news_box('rect_sm','1',$jyotish[1]);
     }
 ?>
 </div>
@@ -60,8 +62,8 @@ $Health = $this->db->get('news')->result_array();
 </div>
 <div class="col-md-12 mar-t-5">
     <?php
-        if(isset($jyotish[1])){
-            echo $this->Html_model->news_box('rect_sm','1',$jyotish[1]);
+        if(isset($jyotish[3])){
+            echo $this->Html_model->news_box('rect_sm','1',$jyotish[3]);
         }
     ?>
 </div>
@@ -79,8 +81,8 @@ $Health = $this->db->get('news')->result_array();
 </div>
 <div class="col-md-12 mar-t-5">
 <?php
-    if(isset($sports[3])){
-        echo $this->Html_model->news_box('rect_sm','1',$sports[3]);
+    if(isset($sports[1])){
+        echo $this->Html_model->news_box('rect_sm','1',$sports[1]);
     }
 ?>
 </div>
@@ -93,8 +95,8 @@ $Health = $this->db->get('news')->result_array();
 </div>
 <div class="col-md-12 mar-t-5">
     <?php
-        if(isset($sports[1])){
-            echo $this->Html_model->news_box('rect_sm','1',$sports[1]);
+        if(isset($sports[3])){
+            echo $this->Html_model->news_box('rect_sm','1',$sports[3]);
         }
     ?>
 </div>
@@ -113,8 +115,8 @@ $Health = $this->db->get('news')->result_array();
 </div>
 <div class="col-md-12 mar-t-5">
 <?php
-    if(isset($Health[3])){
-        echo $this->Html_model->news_box('rect_sm','1',$Health[3]);
+    if(isset($Health[1])){
+        echo $this->Html_model->news_box('rect_sm','1',$Health[1]);
     }
 ?>
 </div>
@@ -127,8 +129,8 @@ $Health = $this->db->get('news')->result_array();
 </div>
 <div class="col-md-12 mar-t-5">
     <?php
-        if(isset($Health[1])){
-            echo $this->Html_model->news_box('rect_sm','1',$Health[1]);
+        if(isset($Health[3])){
+            echo $this->Html_model->news_box('rect_sm','1',$Health[3]);
         }
     ?>
 </div>

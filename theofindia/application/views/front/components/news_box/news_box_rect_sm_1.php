@@ -57,9 +57,9 @@
                     ?>
 
                         <!-- <img   style="width:120px; float:left; overflow:hidden;height:80px; margin-right:10px;" class="image_delay" src="<?php echo img_loading(); ?>" data-src="<?php echo $this->Crud_model->file_view('news',$news_id,'','','thumb','src','multi','one');?>" alt=""/> -->
-
+                        <a href="<?php echo base_url();?>home/news_description/<?php echo $news_id ;?>">
                         <img   style="width:120px; float:left; overflow:hidden;height:80px; margin-right:10px;" class="image_delay1" src="<?php echo $this->Crud_model->file_view('news',$news_id,'','','thumb','src','multi','one');?>" alt=""/>
-                        
+                        </a>
 
                         <p style="text-align: justify;"> <a href="<?php echo base_url();?>home/news_description/<?php echo $news_id ;?>"> <?php echo word_limiter($summary,12);?> <span style="color:red;"> More</a>
 

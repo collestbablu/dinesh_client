@@ -16,20 +16,13 @@ $this->db->limit($detail_news_data['count']);
 <div class="container">
 <h2 class="newheding">  
 Entertainment
-<span style="float:right;font-size:14px; color:red;"> See More</span>
+<span style="float:right;font-size:14px; color:red;"> <a href="<?=base_url();?>home/news/6/0">See More</a></span>
 </h2>
 <div class="row mar-lr--5">
 <div class="col-md-4 col-sm-12 col-xs-12">
 <?php
-   if(isset($detail_news[3])){
-        echo $this->Html_model->news_box('rect_sm','1',$detail_news[3]);
-    }
-?>
-</div>
-<div class="col-md-4 col-sm-12 col-xs-12">
-<?php
-   if(isset($detail_news[2])){
-        echo $this->Html_model->news_box('rect_sm','1',$detail_news[2]);
+   if(isset($detail_news[0])){
+        echo $this->Html_model->news_box('rect_sm','1',$detail_news[0]);
     }
 ?>
 </div>
@@ -42,8 +35,15 @@ Entertainment
 </div>
 <div class="col-md-4 col-sm-12 col-xs-12">
 <?php
-   if(isset($detail_news[0])){
-        echo $this->Html_model->news_box('rect_sm','1',$detail_news[0]);
+   if(isset($detail_news[2])){
+        echo $this->Html_model->news_box('rect_sm','1',$detail_news[2]);
+    }
+?>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+<?php
+   if(isset($detail_news[3])){
+        echo $this->Html_model->news_box('rect_sm','1',$detail_news[3]);
     }
 ?>
 </div>

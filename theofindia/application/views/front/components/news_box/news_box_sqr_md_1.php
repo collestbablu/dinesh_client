@@ -19,8 +19,9 @@
                     ?>
 
                         <!-- <img  style="height:230px;"class=" image_delay" src="<?php echo img_loading(); ?>" data-src="<?php echo $this->Crud_model->file_view('news',$news_id,'','','thumb','src','multi','one');?>" alt=""/> -->
+                        <a href="<?php echo $this->Crud_model->news_link($news_id);?>">
                         <img  style="height:230px;"class=" image_delay1" src="<?php echo $this->Crud_model->file_view('news',$news_id,'','','thumb','src','multi','one');?>"  alt=""/>
-
+                    </a>
                     <?php }}?>
 
                 </span> 

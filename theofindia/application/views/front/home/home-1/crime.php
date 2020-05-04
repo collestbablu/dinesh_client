@@ -1,5 +1,5 @@
 <?php
-$this->db->limit($special_category_data['count']);
+$this->db->limit($crime['count']);
 
 $this->db->order_by('news_id','desc');
 
@@ -12,7 +12,7 @@ $crime  = $this->db->get('news')->result_array();
 <section class="page-section" style="background-color:#eee; margin-top:20px;">
 <div class="container">
 <h2 class="newheding">Crime 
-<span style="float:right;font-size:14px; color:red;"> see more</span>
+<span style="float:right;font-size:14px; color:red;"><a href="<?=base_url();?>home/news/9/0"> see more</a></span>
 </a>
 </h2>
 <div class="row mar-lr--5">
