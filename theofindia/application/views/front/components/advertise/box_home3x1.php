@@ -69,7 +69,8 @@
 
                 <a href="<?php echo $post['url'];?>">
 
-                    <div class="img-bg img-responsive image_delay" style="height:95px;background-image: url(<?php echo img_loading(); ?>);" data-src="<?php echo base_url(); ?>uploads/default_banner/<?php echo $post['img'];?>" alt="advertise"  ></div>
+                    <!-- <div class="img-bg img-responsive image_delay" style="height:95px;background-image: url(<?php echo img_loading(); ?>);" data-src="<?php echo base_url(); ?>uploads/default_banner/<?php echo $post['img'];?>" alt="advertise"  ></div> -->
+                    <div class="img-bg img-responsive image_delay1" style="height:95px;background-image: url(<?php echo base_url(); ?>uploads/default_banner/<?php echo $post['img'];?>);"  alt="advertise"  ></div>
 
                 </a>
 
@@ -89,8 +90,10 @@
 
             <a href="<?php echo $post['url'];?>">
 
-                <div class="img-bg img-responsive image_delay" style="height:95px;background-image: url(<?php echo img_loading(); ?>);" data-src="<?php echo base_url(); ?>uploads/default_banner/<?php echo $post['img'];?>" alt="advertise"  ></div>
+                <!-- <div class="img-bg img-responsive image_delay" style="height:95px;background-image: url(<?php echo img_loading(); ?>);" data-src="<?php echo base_url(); ?>uploads/default_banner/<?php echo $post['img'];?>" alt="advertise"  ></div> -->
 
+
+                 <div class="img-bg img-responsive image_delay1" style="height:95px;background-image: url(<?php echo base_url(); ?>uploads/default_banner/<?php echo $post['img'];?>);"  alt="advertise"  ></div>
             </a>
 
 <?php
