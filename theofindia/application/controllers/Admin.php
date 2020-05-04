@@ -629,7 +629,7 @@ class Admin extends CI_Controller {
          $newsQuery=$this->db->query("select *from news where news_id='$id'");
          $getnews=$newsQuery->row();
 
-         $reporterEmailQuery=$this->db->query("select *from news_reporter where news_reporter_id='$getnews->news_reporter_id'");
+         $reporterEmailQuery=$this->db->query("select *from admin where admin_id='$getnews->news_uploader_id'");
          $getReporterEmail=$reporterEmailQuery->row();
 
          $userName=$this->session->userdata('admin_name');
@@ -4576,6 +4576,22 @@ class Admin extends CI_Controller {
      function test()
      {
 
+     }
+
+     function download_db()
+     {
+     	$this->load->dbutil();
+		$prefs = array(
+		//'format' => 'zip',
+		'filename' => 'crmdata.sql'
+		);
+		$backup = & $this->dbutil->backup($prefs);
+		$db_name = 'crm-on-' . date("Y-m-d-H-i-s") . '.zip';
+		$save = 'uploads/database_backup/' . $db_name;
+		$this->load->helper('file');
+		write_file($save, $backup);
+		$this->load->helper('download');
+		force_download($db_name, $backup);
      }
 
 }

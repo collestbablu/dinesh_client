@@ -34,7 +34,7 @@
 
 	function img_loading(){
 
-		//return base_url().'uploads/others/image_loading.gif';
+		return base_url().'uploads/others/image_loading.gif';
 
 	}
 
